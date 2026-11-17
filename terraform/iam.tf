@@ -114,7 +114,8 @@ resource "aws_iam_role_policy" "github_ecr_push" {
           "ecr:CompleteLayerUpload",
           "ecr:InitiateLayerUpload",
           "ecr:UploadLayerPart",
-          "ecr:PutImage"
+          "ecr:PutImage",
+          "ecr:BatchGetImage"
         ]
         Resource = aws_ecr_repository.app.arn
       }
