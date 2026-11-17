@@ -19,5 +19,5 @@ variable "aws_region" {
 variable "github_repo" {
   description = "GitHub repository in the format 'owner/repo'"
   type        = string
-  default     = "shreyasss12/devops-docker-terraform-project"
+  default     = "shreyasss12@124083469/devops-docker-terraform-project"
 }
