@@ -7,7 +7,7 @@ def home():
     return """
     <h1>Welcome to My DevOps Project!</h1>
     <h2>Application deployed using:</h2>
-    <p>Docker + Terraform + AWS EC2 + GitHub</p>
+    <p>Docker + Terraform + AWS EC2 + GitHub CI/CD</p>
     <p>Status: Application Running Successfully!</p>
     """
 
