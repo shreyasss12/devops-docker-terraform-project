@@ -5,7 +5,7 @@ on:
       - main
     workflows_dispatch:
 
-permission:
+permissions:
   id-token: write
   contents: read
 
@@ -36,3 +36,7 @@ jobs:
       run: |
         docker build -t ${{steps.login-ecr.outputs.registry}}/${ECR_REPOSITORY}:${GITHUB_SHA} \
           ./application
+
+    - name: Push Docker image to Amazon ECR
+      run: |
+        docker push ${{steps.login-ecr.outputs.registry}}/${ECR_REPOSITORY}:${GITHUB_SHA}
